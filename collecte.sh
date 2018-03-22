@@ -15,4 +15,4 @@ power1=$(calc $volt1*$crt1)
 power2=$(calc $volt2*$crt2)
 total_power=$(calc $power1+$power2)
 echo $time,$temp,$power1,$power2,$total_power >> collected00.csv
-awk -F"," '{printf "%-30s %-20s %-20s %-20s %-20s\n",$1,$2,$3,$4,$5}' collected00.csv >> collected100.csv
+awk -F"," '{printf "%-35s %-20s %-20s %-20s %-20s\n",$1,$2,$3,$4,$5}' collected00.csv >> collected100.csv
