@@ -1,5 +1,5 @@
 #!/bin/bash -ex
-printf timesatmp,temperature,power1,power2,total_power >> collected0.csv
+echo timesatmp,temperature,power1,power2,total_power >> collected00.csv
 export x=$(sudo eri-ipmitool rns 0)
 time=${x:54:24}
 temp=${x:170:8}
@@ -14,5 +14,5 @@ crt2=${x:170:8}
 power1=$(calc $volt1*$crt1)
 power2=$(calc $volt2*$crt2)
 total_power=$(calc $power1+$power2)
-printf $time,$temp,$power1,$power2,$total_power >> collected0.csv
-awk -F"," '{printf "%-30s %-20s %-20s %-20s %-20s\n",$1,$2,$3,$4,$5}' collected0.csv >> collected10.csv
+echo $time,$temp,$power1,$power2,$total_power >> collected00.csv
+awk -F"," '{printf "%-30s %-20s %-20s %-20s %-20s\n",$1,$2,$3,$4,$5}' collected00.csv >> collected100.csv
