@@ -18,5 +18,5 @@ do
    total_power=$(calc $power1+$power2)
    echo $time,$temp,$power1,$power2,$total_power >> collected000.csv
    awk -F"," '{printf "%-30s%-20s%-20s%-20s%-20s\n",$1,$2,$3,$4,$5}' collected000.csv > collected1000.csv
-   sleep 1
+   sleep 0
 done
