@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash
 
 N= $(( 1 + RANDOM % 4))
 for i in $(seq 1 $N);
