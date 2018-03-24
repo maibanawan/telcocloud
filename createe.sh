@@ -1,5 +1,6 @@
 #!/bin/env/bash
-
+x=$(RANDOM % 4)
+echo $x
 N= $(( 1 + $RANDOM % 4))
 for i in $(seq 1 $N);
 do 
