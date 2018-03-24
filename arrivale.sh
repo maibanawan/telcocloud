@@ -8,6 +8,6 @@ while [ $SECONDS -lt $end ]; do
    interval_sec=$(calc $interval*60)
    source createe.sh
    sleep $interval_sec
-   c=$(calc $count+1)
-   count=$c
+   c=$(( $count + 1 ))
+   count=$c 
 done
