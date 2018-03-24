@@ -10,7 +10,7 @@ echo $num_vms
 
 #select name of vm randomly
 vm=$(( 1 + $RANDOM % $num_vms ))
-start=$(calc $(calc $v-1)*5)
+start=$(calc $(calc $vm-1)*5)
 vm_name=${x:start:4}
 openstack server delete $vm_name
 
