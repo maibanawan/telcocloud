@@ -1,5 +1,5 @@
 #!/bin/env bash
-N=$(( 1 + $RANDOM % 2 ))
+N=$(( 3 + $RANDOM % 3 ))
 echo $N
 for i in $(seq 1 $N);
 do 
