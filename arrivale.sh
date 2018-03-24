@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-end=$((SECONDS+300))
+end=$((SECONDS+600))
 count=1
 while [ $SECONDS -lt $end ]; do
    interval=$(( 1 + $RANDOM % 5 ))
