@@ -1,4 +1,4 @@
-#!/bin/env/bash
+#!/bin/bash
 x=$(RANDOM % 4)
 echo $x
 N= $(( 1 + $RANDOM % 4))
