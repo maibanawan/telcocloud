@@ -1,7 +1,8 @@
 #!/bin/env bash
 export x=( $RANDOM % 4 )
 echo $x
-N= $(( 1 + $RANDOM % 4))
+N= $(( 1 + $x))
+echo $N
 for i in $(seq 1 $N);
 do 
 echo $i; 
