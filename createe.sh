@@ -1,4 +1,5 @@
 #!/bin/env bash
+echo $count
 N=$(( 3 + $RANDOM % 3 ))
 echo $N
 for i in $(seq 1 $N);
