@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-end=$((SECONDS+600))
+end=$((SECONDS+300))
 count=1
 while [ $SECONDS -lt $end ]; do
    interval=$(( 3 + $RANDOM % 3 ))
