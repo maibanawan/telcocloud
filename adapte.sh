@@ -7,7 +7,7 @@ export available_f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_
 #do
  for i in $(seq 1 11);
  do
- export available_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_available_frequencies)
+ #export available_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_available_frequencies)
  export current_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_cur_freq)
  export x=$(mpstat -P $i | awk '{print $13}')
  export idle=${x:8:5}
