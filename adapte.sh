@@ -2,6 +2,7 @@
 up_threshold=80
 down_threshold=20
 fmax=1996000
+export available_f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies)
 #while true
 #do
  for i in $(seq 1 11);
