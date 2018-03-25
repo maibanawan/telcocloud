@@ -13,6 +13,7 @@ export available_f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_
  export x=$(mpstat -P $i | awk '{print $13}')
  export idle=${x:8:2}
  export utilization=$(calc 100 - $idle)
+ echo $utilization
  if (( $utilization > $up_threshold ))
  then
   if (( $current_f == 1596000 ))
