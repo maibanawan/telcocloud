@@ -10,7 +10,7 @@ export available_f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_
  #export available_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_available_frequencies)
  export current_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_cur_freq)
  export x=$(mpstat -P $i | awk '{print $13}')
- export idle=${x:8:5}
+ export idle=${x:8:2}
  export utilization=$(calc 100 - $idle)
  if (( $utilization > $up_threshold ))
  then
