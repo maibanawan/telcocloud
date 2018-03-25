@@ -1,11 +1,11 @@
 #!/bin/env bash
 
-end=$((SECONDS+300))
+end=$((SECONDS+600))
 count=1
 total_time=0
 total_vms=0
 while [ $SECONDS -lt $end ]; do
-   interval=$(( 2 + $RANDOM % 3 ))
+   interval=$(( 2 + $RANDOM % 4 ))
    echo $interval
    interval_sec=$(calc $interval*60)
    source createe.sh
