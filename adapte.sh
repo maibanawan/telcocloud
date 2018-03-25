@@ -4,7 +4,7 @@ down_threshold=20
 fmax=1996000
 while true
 do
- for i in in $(seq 1 11);
+ for i in $(seq 1 11);
  do
  export available_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/scaling_available_frequencies)
  export current_f=$(cat /sys/devices/system/cpu/cpu$i/cpufreq/cpuinfo_cur_freq)
