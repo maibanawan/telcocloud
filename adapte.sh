@@ -29,7 +29,7 @@ export available_f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_
    next_freq=1996000 
   fi
   sudo sh -c "echo -n "userspace" > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor"
-  sudo sh -c "echo -n  $next_freq > /sys/devices/system/cpu/cpuX/cpufreq/scaling_setspeed"
+  sudo sh -c "echo -n  $next_freq > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_setspeed"
   echo $current_f $next_freq
  elif (( $utilization < $down_threshold ))
  then   
@@ -47,7 +47,7 @@ export available_f=$(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_
    next_freq=1596000 
   fi
   sudo sh -c "echo -n "userspace" > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_governor"
-  sudo sh -c "echo -n  $next_freq > /sys/devices/system/cpu/cpuX/cpufreq/scaling_setspeed"
+  sudo sh -c "echo -n  $next_freq > /sys/devices/system/cpu/cpu$i/cpufreq/scaling_setspeed"
   echo $current_f $next_freq
  fi
  done
