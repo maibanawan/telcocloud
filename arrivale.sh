@@ -15,5 +15,8 @@ while [ $SECONDS -lt $end ]; do
    total_time=$(( $total_time + $interval ))
    total_vms=$(( $total_vms + $N ))
 done
+c=$(( $count - 1 ))
+count=$c 
 echo total_time $total_time
 echo total_vms $total_vms
+echo groups $count
