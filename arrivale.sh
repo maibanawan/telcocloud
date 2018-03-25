@@ -9,7 +9,7 @@ while [ $SECONDS -lt $end ]; do
    echo $interval
    interval_sec=$(calc $interval*60)
    source createe.sh
-   #sleep $interval_sec
+   sleep $interval_sec
    c=$(( $count + 1 ))
    count=$c 
    total_time=$(( $total_time + $interval ))
