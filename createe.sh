@@ -1,5 +1,5 @@
 #!/bin/env bash
-N=$(( 1 + $RANDOM % 8 ))
+N=$(( 1 + $RANDOM % 4 ))
 echo $N
 for i in $(seq 1 $N);
 do 
