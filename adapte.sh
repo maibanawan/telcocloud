@@ -1,5 +1,5 @@
 #!/bin/env bash
-up_threshold=80
+up_threshold=60
 down_threshold=40
 
 fmax=1996000
