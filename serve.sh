@@ -19,6 +19,7 @@ echo $start
 vm_name=${x:start:6}
 running_time=$(( 1 + $RANDOM % 3 ))
 echo $running_time
+running_time_sec=$(( $running_time * 60 )) 
 sleep $running_time
 openstack server delete $vm_name
 openstack server list | awk '{print $4}' | grep -v ^N | grep -v ^$ | paste -sd ","> list.csv
